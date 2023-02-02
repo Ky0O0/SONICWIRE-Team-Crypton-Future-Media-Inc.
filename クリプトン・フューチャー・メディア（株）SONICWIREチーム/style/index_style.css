@@ -1,0 +1,364 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #F1F1F1;
+}
+#header{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	opacity: 0.9;
+	background-color: #E6E6E6;
+}
+#header:hover{
+	opacity: 1.0;
+}
+.btn_help{
+	width: 50px;
+	height: 60px;
+	border: none;
+	float: right;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	color: #999999;
+	background-color: #E6E6E6;
+}
+.btn_help:hover, .btn_shopping:hover, .btn_paperclip:hover{
+	color: #FF6600;
+	transition: 0.4s;
+}
+.btn_help:hover:after{
+	content: "ヘルプを見る";
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 8px;
+    border-radius: 8px 0px 8px 8px;
+    font-weight: 100;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #999999;
+}
+#input_text{
+	width: 90px;
+	height: 30px;
+	margin-top: 11px;
+	float: right;
+	border: 1px solid #CCCCCC;
+	transition: 0.4s;
+}
+#input_text:focus{
+	width: 250px;
+	transition: 0.4s;
+}
+.btn_shopping, .btn_paperclip{
+	height: 60px;
+	width: 50px;
+	border: none;
+	float: right;
+	cursor: pointer;
+	font-size: 20px;
+	color: #000000;
+	background-color: #E6E6E6;
+}
+.btn_shopping:hover:after{
+	content: "ショッピング カートを見る";
+    position: absolute;
+    top: 50px;
+    right: 160px;
+    padding: 8px;
+    border-radius: 8px 0px 8px 8px;
+    font-weight: 100;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #999999;
+}
+.btn_paperclip:hover:after{
+	content: "ブックマーク 一覧を見る";
+    position: absolute;
+    top: 50px;
+    right: 210px;
+    padding: 8px;
+    border-radius: 8px 0px 8px 8px;
+    font-weight: 100;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #999999;
+}
+.btn_login{
+	width: 100px;
+	height: 30px;
+	margin-top: 15px;
+	border-radius: 2px;
+	border: none;
+	float: right;
+	font-weight: bold;
+	font-size: 13px;
+	background-color: #588E2C;
+}
+.btn_login:hover{
+	width: 100px;
+	height: 30px;
+	margin-top: 15px;
+	border-radius: 2px;
+	border: none;
+	float: right;
+	font-weight: bold;
+	font-size: 13px;
+	background-color: #67A337;
+}
+.nav{
+	height: 30px;
+	margin-top: 10px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	background-color: #E6E6E6;
+}
+ol{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 15px;
+	height: 35px;
+	line-height: 200%;
+	display: inline-block;
+}
+ol a{
+	color: #000000;
+	text-decoration: none;
+	display: block;
+}
+ol > li{
+	float: left;
+	width: 100px;
+	height: 40px;
+}
+ol > li:hover{
+	background-color: #E6E6E6;
+}
+ol > li:hover > a{
+	color: #000000;
+}
+ol > li > ul{
+	width: 215px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+	text-align: left;
+}
+ol > li:hover > ul{
+	display: block;
+}
+ol > li > ul > li{
+	position: relative;
+	z-index: 100;
+	background-color: #E6E6E6;
+}
+ol > li > ul > li:hover{
+	background-color: #DADADA;
+}
+ol > li > ul > li:hover > a{
+	color: #000000;
+}
+#slideshowimg_container{
+	width: 950px;
+	height: 240px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#slideshowimg{
+	width: 950px;
+	height: 240px;
+	margin-top: 85px;
+	border-radius: 5px;
+	background: url(../index_image/miku_banner.jpg);
+	animation: slide 15s infinite;
+}
+@keyframes slide{
+	25%{
+		background: url(../index_image/luka_banner.jpg);
+	}
+	50%{
+		background: url(../index_image/kagamine_banner.jpg);
+	}
+	75%{
+		background: url(../index_image/sonicwire_banner.jpg);
+	}
+	100%{
+		background: url(../index_image/miku_banner.jpg);
+	}	
+}
+#container{
+	width: 950px;
+	height: 1900px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+#content{
+	width: 620px;
+	height: 1400px;
+	float: left;
+	margin-left: 25px;
+	margin-top: 25px;
+}
+#navigation{
+	width: 255px;
+	height: 1830px;
+	float: right;
+	margin-right: 25px;
+	margin-top: 25px;
+}
+#a_sonicwire{
+	text-decoration: none;
+	font-size: 12px;
+	float: right;
+	color: #FF6600;
+}
+#a_sonicwire:hover{
+	text-decoration: underline;
+}
+#covid{
+	width: 100%;
+	height: 215px;
+	padding: 3px;
+	border-radius: 4px;
+	background-color: #FFFFCC;
+}
+#word{
+	width: 100%;
+	height: 180px;
+	padding: 5px;
+	margin-top: 20px;
+	border-radius: 4px;
+	background-color: #CfCfCf;
+}
+.a_vocaloid{
+	font-size: 13px;
+	text-decoration: none;
+	margin: 7px;
+	color: #FF6600;
+}
+.a_vocaloid:hover{
+	text-decoration: underline;
+}
+.button1{
+	width: 100%;
+	height: 40px;
+	border: none;
+	border-radius: 4px;
+	margin-top: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #C5DFA6;
+}
+.button1:hover{
+	background-color: #DAF1BF;
+}
+#links{
+	width: 100%;
+	height: 575px;
+	padding: 5px;
+	border-radius: 4px;
+	margin-top: 20px;
+	background-color: #FFD6CA;
+}
+.category{
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+	color: #000000;
+}
+.category:hover{
+	text-decoration: underline;
+}
+.item{
+	font-size: 13px;
+	text-decoration: none;
+	color: #FF6600;
+}
+.item:hover{
+	text-decoration: underline;
+}
+#best{
+	width: 100%;
+	height: 323px;
+	padding: 5px;
+	border-radius: 4px;
+	margin-top: 20px;
+	background-color: #FFD6CA;
+}
+.a_best{
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+	color: #000000;
+}
+.a_best:hover{
+	text-decoration: underline;
+}
+.a_best_link{
+	font-size: 13px;
+	text-decoration: none;
+	color: #FF6600;
+}
+.a_best_link:hover{
+	text-decoration: underline;
+}
+#new{
+	width: 100%;
+	height: 150px;
+	padding: 5px;
+	border-radius: 4px;
+	margin-top: 20px;
+	background-color: #FFD6CA;
+}
+.a_new{
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+	color: #000000;
+}
+.a_new:hover{
+	text-decoration: underline;
+}
+.a_new_link{
+	font-size: 13px;
+	text-decoration: none;
+	color: #FF6600;
+}
+.a_new_link:hover{
+	font-size: 13px;
+	text-decoration: none;
+	color: #FF6600;
+}
+#footer{
+	width: 950px;
+	height: 100px;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.a_footer{
+	font-size: 12px;
+	text-decoration: none;
+	margin: 5px;
+	color: #999999;
+}
+.a_footer:hover{
+	text-decoration: underline;
+}
